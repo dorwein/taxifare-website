@@ -10,17 +10,18 @@ header_style = """
 }
 .centered-header-orange {
     text-align: center;
-    color: red;
+    color: #ff5733;
 }
 .stButton>button {
     width: 100%;
     font-size: 20px;
+    background-color: #ffa591;
+    color: white;
 }
 </style>
 """
 
-    # background-color: orange;
-    # color: white;
+
 st.markdown(header_style, unsafe_allow_html=True)
 
 # Title of the app (centered)
