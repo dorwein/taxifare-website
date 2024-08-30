@@ -29,7 +29,7 @@ header_style = """
 st.markdown(header_style, unsafe_allow_html=True)
 
 # Title of the app (centered)
-st.markdown('<h1 class="centered-header">Taxi Fare Prediction</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="centered-header-orange">Taxi Fare Prediction</h1>', unsafe_allow_html=True)
 
 st.markdown('''
 This Taxi Fare Prediction app, built as part of a data science bootcamp, uses a machine
