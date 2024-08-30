@@ -74,7 +74,8 @@ if st.markdown('<div style="text-align: center;">', unsafe_allow_html=True):
         response = requests.get(url, params=params)
         if response.status_code == 200:
             prediction = response.json()['fare']
-            st.markdown('<h1 class="centered-header">Prediction Fare: ${prediction:.2f}</h1>', unsafe_allow_html=True)
+            st.markdown('<h2 class="centered-header">Prediction Fare:</h2>', unsafe_allow_html=True)
+            st.markdown(f'<h1 class="centered-header">${prediction:.2f}</h1>', unsafe_allow_html=True)
             # st.write(f"Predicted Fare: ${prediction:.2f}")
         else:
             st.write("Error in API request. Please try again.")
