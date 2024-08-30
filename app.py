@@ -6,9 +6,8 @@ from datetime import datetime
 st.title('Taxi Fare Prediction')
 
 st.markdown('''
-Remember that there are several ways to output content into your web page...
-
-Either as with the title by just creating a string (or an f-string). Or as with this paragraph using the `st.` functions
+This Taxi Fare Prediction app, built as part of a data science bootcamp,
+uses a machine learning model we developed to estimate taxi fares in New York City. Enter ride details to get an instant fare prediction!
 ''')
 
 # Input parameters
