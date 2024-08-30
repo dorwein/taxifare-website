@@ -8,6 +8,10 @@ header_style = """
 .centered-header {
     text-align: center;
 }
+.centered-header-orange {
+    text-align: center;
+    color: orange;
+}
 .stButton>button {
     width: 100%;
     font-size: 20px;
@@ -38,7 +42,7 @@ with col2:
 pickup_datetime = f"{date} {time}"
 
 # Section for Pickup Location
-st.markdown('<h2 class="centered-header">Pickup Location</h2>', unsafe_allow_html=True)
+st.markdown('<h3 class="centered-header">Pickup Location</h3>', unsafe_allow_html=True)
 col3, col4 = st.columns(2)
 with col3:
     pickup_longitude = st.number_input('Longitude', value=-73.985428, format="%.6f", key='pickup_longitude')
@@ -46,7 +50,7 @@ with col4:
     pickup_latitude = st.number_input('Latitude', value=40.748817, format="%.6f", key='pickup_latitude')
 
 # Section for Dropoff Location
-st.markdown('<h2 class="centered-header">Dropoff Location</h2>', unsafe_allow_html=True)
+st.markdown('<h3 class="centered-header">Dropoff Location</h3>', unsafe_allow_html=True)
 col5, col6 = st.columns(2)
 with col5:
     dropoff_longitude = st.number_input('Longitude', value=-73.985428, format="%.6f", key='dropoff_longitude')
@@ -54,7 +58,7 @@ with col6:
     dropoff_latitude = st.number_input('Latitude', value=40.748817, format="%.6f", key='dropoff_latitude')
 
 # Section for Passenger Count
-st.markdown('<h2 class="centered-header">Number of Passengers</h2>', unsafe_allow_html=True)
+st.markdown('<h3 class="centered-header">Number of Passengers</h3>', unsafe_allow_html=True)
 passenger_count = st.number_input('Passengers', min_value=1, max_value=8, value=1)
 
 # Centered and styled 'Get Fare Prediction' button
@@ -74,8 +78,8 @@ if st.markdown('<div style="text-align: center;">', unsafe_allow_html=True):
         response = requests.get(url, params=params)
         if response.status_code == 200:
             prediction = response.json()['fare']
-            st.markdown('<h2 class="centered-header">Prediction Fare:</h2>', unsafe_allow_html=True)
-            st.markdown(f'<h1 class="centered-header">${prediction:.2f}</h1>', unsafe_allow_html=True)
+            st.markdown('<h3 class="centered-header">Prediction Fare:</h3>', unsafe_allow_html=True)
+            st.markdown(f'<h1 class="centered-header-orange">${prediction:.2f}</h1>', unsafe_allow_html=True)
             # st.write(f"Predicted Fare: ${prediction:.2f}")
         else:
             st.write("Error in API request. Please try again.")
