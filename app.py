@@ -22,8 +22,9 @@ st.markdown(header_style, unsafe_allow_html=True)
 st.markdown('<h1 class="centered-header">Taxi Fare Prediction</h1>', unsafe_allow_html=True)
 
 st.markdown('''
-This Taxi Fare Prediction app, built as part of a data science bootcamp, uses a machine
-learning model we developed to estimate taxi fares in New York City. Enter ride details to get an instant fare prediction!
+Remember that there are several ways to output content into your web page...
+
+Either as with the title by just creating a string (or an f-string). Or as with this paragraph using the `st.` functions
 ''')
 
 # Section for Date and Time input
@@ -70,6 +71,7 @@ if st.markdown('<div style="text-align: center;">', unsafe_allow_html=True):
         }
 
         # Make API request
+        url = 'https://taxifare.lewagon.ai/predict'
         response = requests.get(url, params=params)
         if response.status_code == 200:
             prediction = response.json()['fare']
