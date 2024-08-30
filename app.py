@@ -27,7 +27,7 @@ learning model we developed to estimate taxi fares in New York City. Enter ride 
 ''')
 
 # Section for Date and Time input
-st.markdown('<h2 class="centered-header">Ride Date and Time</h2>', unsafe_allow_html=True)
+st.markdown('<h3 class="centered-header">Ride Date and Time</h3>', unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 with col1:
