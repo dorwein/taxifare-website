@@ -15,8 +15,12 @@ header_style = """
 .stButton>button {
     width: 100%;
     font-size: 20px;
-    background-color: #ffa591;
+    background-color: #ff5733;
     color: white;
+}
+.stButton>button:hover {
+    background-color: white;
+    color: #ff5733;
 }
 </style>
 """
